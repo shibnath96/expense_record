@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/sidebar.css">
 </head>
+
 <body>
 
-	<div class="container">
-		
-		<!-- Nav Menu -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  			<a class="navbar-brand" href="#">Navbar</a>
-		</nav>
+	<!-- Nav Menu -->
+	<header>
+		<%- include('pages/header/header.ejs') %> 
+	</header>
 
-		<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
-			<div class="bd-toc-item">
-      			<ul class="nav bd-sidenav">
-      				<li>
-            			<a href="/docs/4.5/getting-started/introduction/"> Introduction </a>
-          			</li>
-      			</ul>
-    		</div>
-    		<div class="bd-toc-item active">
-		      <a class="bd-toc-link" href="/docs/4.5/components/alerts/">
-		        Components
-		      </a>
-		    </div>
-      		<ul class="nav bd-sidenav">
-      			<li>
-            		<a href="/docs/4.5/components/alerts/"> Alerts </a>
-          		</li>
-      		</ul>
-	    </nav>
-
-
+	<!-- Main container -->
+	<div class="container-fluid">
+		<div class="row flex-xl-nowrap">
+			<!-- Side navigation -->
+			<%- include('pages/sidebar/sidebar.ejs') %>
+			<!-- End of side navigation -->
+			<!-- Main content -->
+			<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+				<h1>Home Content!</h1>
+			</main>
+			<!-- End of main content section -->
+		</div>
 	</div>
 
 	<script type="text/javascript" src="/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/index.js"></script>
 
 </body>
+
 </html>
